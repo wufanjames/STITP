@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>勤工俭学安排</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+      <link href="{{static_url('bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body  background="{{static_url('images/nuptbg.jpg')}}">
+<h1>勤工俭学安排</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>星期</th>
+        <th>地点</th>
+    </tr>
+    {%for w in work %}
+    <tr>
+        <td>{{w.num}}</td>
+        <td>{{w.name}}</td>
+        <td>{{w.date}}</td>
+        <td>{{w.place}}</td>
+    </tr>
+    {% end %}
+</table>
+
+<script src="{{static_url('jquery.min.js')}}"></script>
+<script src="{{static_url('bootstrap.min.js')}}"></script>
+</body>
+<footer>
+    <a href="/thm/worker/edit">修改安排</a>
+    <a href="/thm">返回上层</a>
+</footer>
+</html>

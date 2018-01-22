@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>提交报告</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body>
+<h1>提交报告</h1>
+<form action='/stu/upload' enctype="multipart/form-data" method='post'>
+    {% raw xsrf_form_html() %}
+    <input type='file' name='file'/><br/>
+    <input type='submit' value='submit'/>
+
+</form>
+<h1>{{m}}</h1>
+<a href="/stu">返回</a>
+</body>
+</html>

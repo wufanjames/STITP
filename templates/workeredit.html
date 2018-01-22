@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调整安排</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body>
+<h1>调整安排</h1>
+<form method="post" action="/thm/worker/edit">
+    {% raw xsrf_form_html() %}
+    日期：
+    <select name="date" datatype="int">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+</select>
+    学号：<input type="text" name="num" required>
+    姓名：<input type="text" name="name" required>
+    地点：<input type="text" name="place" required>
+    <button type="submit">提交</button>
+
+</form>
+</body>
+</html>

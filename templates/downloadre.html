@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>导出日志</title>
+</head>
+<body>
+<form action="/thm/record/download/text.txt" method="post">
+    {% raw xsrf_form_html() %}
+    <button type="submit">下载</button>
+</form>
+</body>
+</html>

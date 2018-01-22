@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>
+			{% block title %}todo{% end %}
+		</title>
+		<link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+		<link rel="stylesheet" href="{{ static_url("styles/reset.css") }}" type="text/css"/>
+		<link rel="stylesheet" href="{{ static_url("styles/index/style.css") }}" type="text/css"/>
+	</head>
+
+	<body  background="{{static_url('images/nuptbg.jpg')}}">
+		<div class="page">
+			<div class="header box">
+        		</a>
+				<a href="/thm/device">设备信息</a>
+			</div>
+
+			<div class="main box">
+				{% block items %}
+				{% end %}
+			</div>
+
+			<div class="foot">
+				<a href="/thm">返回上层</a>
+    		</div>
+		</div>
+		{% block bottom %}{% end %}
+	</body>
+
+</html>

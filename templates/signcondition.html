@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>签到情况</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+    <link href="{{static_url('bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}">
+<h1>当前签到口令：{{name}}</h1>
+<h1>当前共有 {{number[0]['count(*)']}} 人已经签到。</h1>
+{% if id=='0' %}
+<a href="/tem/sign/condition/0">刷新数据</a>
+{% end %}
+<br>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>序号</th>
+        <th>学号</th>
+        <th>姓名</th>
+    </tr>
+    {%for r in re %}
+    <tr>
+        <td>{{r.signid}}</td>
+        <td>{{r.stunum}}</td>
+        <td>{{r.stuname}}</td>
+    </tr>
+    {% end %}
+    </table>
+<a href="/tem">返回</a>
+<script src="{{static_url('jquery.min.js')}}"></script>
+<script src="{{static_url('bootstrap.min.js')}}"></script>
+</body>
+</html>

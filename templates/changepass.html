@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body>
+ <form method="POST" action="/password/{{user[0].id}}">
+     {% raw xsrf_form_html() %}
+    新密码：<input type="text" name="pass" required>
+    <button type="submit">修改</button>
+ </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body  background="{{static_url('images/nuptbg.jpg')}}">
+<h1>个人中心</h1>
+<br>
+<h2>用户名：{{user}}</h2>
+<br>
+<h2>真实姓名：{{userinfo[0].real_name}}</h2>
+<br>
+<h2>您的身份是：{{ID}}</h2>
+<br>
+<a href="/password/{{userinfo[0].id}}">修改登陆密码</a>
+<h1>{{m}}</h1>
+</body>
+</html>

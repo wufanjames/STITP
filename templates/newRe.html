@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建日志</title>
+     <link href="{{static_url('bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body  background="{{static_url('images/nuptbg.jpg')}}" margintop="100px">
+<div align="center" >
+<h1>新建日志</h1>
+<form method="post" action="/thm/record/new" >
+    {% raw xsrf_form_html() %}
+    <h1>日志内容:</h1>
+    <input type="text" name="content" class="form-control" >
+    <br>
+    <div class="input-group input-group-sm">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">创建</button>
+        </div>
+</form>
+    <br>
+    <br>
+    <a href="/thm">返回</a>
+    </div>
+<script src="{{static_url('jquery.min.js')}}"></script>
+<script src="{{static_url('bootstrap.min.js')}}"></script>
+</body>
+</html>

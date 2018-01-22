@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>学生签到</title>
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}">
+<h1>学生签到</h1>
+<form method="post" action="/stu/sign" >
+    {% raw xsrf_form_html() %}
+    请输入签到口令:<input type="text" name="signname" >
+    <button type="submit">签到</button>
+</form>
+<h1>{{m}}</h1>
+<a href="/stu">返回首页</a>
+</body>
+</html>

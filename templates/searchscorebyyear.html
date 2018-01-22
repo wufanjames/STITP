@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>查询成绩</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}">
+<h1>查询成绩</h1>
+<form method="post" action="/tem/search/2">
+    {% raw xsrf_form_html() %}
+    学年：<input type="text" style="input" name="year1" required>~~<input type="text" style="input" name="year2" required>
+    <br>
+    <button type="submit">查询</button>
+    <h1>填写完整年份，如：2016</h1>
+</form>
+</body>
+</html>

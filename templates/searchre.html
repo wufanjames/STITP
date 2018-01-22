@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询日志</title>
+     <link href="{{static_url('bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}" >
+<div align="center">
+<h1>查询日志</h1>
+<form method="post" action="/thm/record/search">
+    {% raw xsrf_form_html() %}
+    <div class="input-group input-group-sm">
+    <input type="text" name="year" class="form-control"><h1>年</h1>
+    <input type="text" name="month" class="form-control"><h1>月</h1>
+    <input type="text" name="day" class="form-control"><h1>日</h1>
+        </div>
+    <div class="input-group input-group-sm">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">查询</button>
+        </div>
+</form>
+    <br>
+    <br>
+    <a href="/thm">返回</a>
+</div>
+<script src="{{static_url('jquery.min.js')}}"></script>
+<script src="{{static_url('bootstrap.min.js')}}"></script>
+</body>
+</html>

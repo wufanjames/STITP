@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>全部项目</title>
+       <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+    <link href="{{static_url('bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}">
+<h1>全部项目：</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>课程号</th>
+        <th>课程名称</th>
+        <th>属性</th>
+        <th>所属学科</th>
+        <th>操作</th>
+    </tr>
+    {%for r in re %}
+    <tr>
+        <td>{{r.projectnum}}</td>
+        <td>{{r.projectname}}</td>
+        <td>{{r.attribute}}</td>
+        <td>{{r.subject}}</td>
+        {% if userinfo[0].identity==1 %}
+        <td><a href="/prm/delete/{{r.id}}">删除</a></td>
+        {% end %}
+    </tr>
+    {% end %}
+    </table>
+<footer>
+    <a href="/{{url}}">返回</a>
+</footer>
+<script src="{{static_url('jquery.min.js')}}"></script>
+<script src="{{static_url('bootstrap.min.js')}}"></script>
+</body>
+</html>

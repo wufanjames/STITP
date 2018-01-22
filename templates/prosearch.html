@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>查询项目</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}">
+<h1>查询项目</h1>
+<form method="post" action="/prm/search">
+    {% raw xsrf_form_html() %}
+    项目名称：<input type="text" style="input" name="name" required>
+    <br>
+    <button type="submit">查询</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新建项目</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}">
+<h1>新建项目</h1>
+<form method="post" action="/prm/new">
+   {% raw xsrf_form_html() %}
+    名称：
+    <input type="text" name="name">
+    <br>
+    课程代码：
+    <input type="text" name="num">
+    <br>
+    属性：
+    <select name="attribute" datatype="text">
+        <option value="专业基础课">专业基础课</option>
+        <option value="专业课">专业课</option>
+        <option value="全校任选课">全校任选课</option>
+        <option value="专业限选课">专业限选课</option>
+        <option value="必修课">必修课</option>
+        </select>
+    <br>
+    所属学科：
+        <input type="text" name="subject">
+    <br>
+    <button type="submit">新建</button>
+</form>
+</body>
+</html>

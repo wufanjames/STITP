@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询结果</title>
+    <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+    <link href="{{static_url('bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>内容</th>
+        <th>日期</th>
+    </tr>
+    {%for r in re %}
+    <tr>
+        <td>{{r.content}}</td>
+        <td>{{r.time}}</td>
+    </tr>
+    {% end %}
+    </table>
+<script src="{{static_url('jquery.min.js')}}"></script>
+<script src="{{static_url('bootstrap.min.js')}}"></script>
+</body>
+<footer>
+    <a href="/thm">返回上层</a>
+</footer>
+</html>

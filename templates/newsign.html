@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建签到</title>
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}">
+<h1>新建签到</h1>
+<form method="post" action="/tem/sign/new" >
+    {% raw xsrf_form_html() %}
+    请输入签到口令（仅限字母）:<input type="text" name="signname" >
+    <button type="submit">新建</button>
+</form>
+</body>
+</html>

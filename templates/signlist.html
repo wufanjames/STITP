@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>历史签到</title>
+     <link rel="icon" href="{{static_url('images/favicon.jpg')}}">
+    <link href="{{static_url('bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body background="{{static_url('images/nuptbg.jpg')}}">
+<h1>历史签到</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>序号</th>
+        <th>口令</th>
+        <th>创建时间</th>
+        <th>详情</th>
+    </tr>
+    {%for r in re %}
+    <tr>
+        <td>{{r.id}}</td>
+        <td>{{r.name}}</td>
+         <td>{{r.time}}</td>
+        <td><a href="/tem/sign/condition/{{r.id}}">详情</a></td>
+    </tr>
+    {% end %}
+    </table>
+<script src="{{static_url('jquery.min.js')}}"></script>
+<script src="{{static_url('bootstrap.min.js')}}"></script>
+</body>
+</html>
